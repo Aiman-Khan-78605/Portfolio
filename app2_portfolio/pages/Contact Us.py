@@ -1,7 +1,10 @@
 import streamlit as st
 from send_email import send_email
+import pandas
 
 st.header("Contact Us")
+df=pandas.read_csv("topic.csv")
+
 
 with st.form(key="email_form"):
     user_email=st.text_input("Your email_address")
